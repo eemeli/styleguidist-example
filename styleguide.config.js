@@ -1,6 +1,9 @@
 module.exports = {
 	title: 'React Style Guide Example',
 	defaultExample: true,
+	getExampleFilename(componentPath) {
+		return componentPath.replace(/\.jsx?$/, '.examples.md')
+	},
 	webpackConfig: {
 		module: {
 			rules: [
